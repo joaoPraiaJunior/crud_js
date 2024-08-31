@@ -1,0 +1,10 @@
+npm i -g json-server
+
+npm init -y depois criar uma pasta para o back-end e dentro dela rodar esse comando.
+Vai criar o package.json
+
+depois no package json escreva esse comando
+
+ "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },

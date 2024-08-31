@@ -1,0 +1,7 @@
+const ui = {
+
+    async renderizarPensamentos() {
+        
+
+    }
+}
