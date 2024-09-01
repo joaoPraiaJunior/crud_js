@@ -6,6 +6,8 @@ const ui = {
 
     async renderizarPensamentos() {
 
+        const listaPensamentos = document.querySelector('[data-js="lista-de-pensamentos"]');
+
         try {
             const pensamentos = await api.buscarPensamentos();
 
@@ -17,9 +19,7 @@ const ui = {
     },
 
     adicionarPensamentoNaLista(pensamento) {
-        
-        const listaPensamentos = document.querySelector('[data-js="lista-de-pensamentos"]');
-        listaPensamentos.appendChild(constroiPensamento(pensamento));
+        constroiPensamento(pensamento);
     }
 }
 

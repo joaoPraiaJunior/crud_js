@@ -66,14 +66,9 @@
       "autoria": "Mãe"
     },
     {
-      "id": "0533",
-      "conteudo": "Sou um Dev Gamer",
-      "autoria": "João Praia"
-    },
-    {
-      "id": "91ae",
-      "conteudo": "Não se pode aprender algo de uma lição\nsem dor, já que não se pode ganhar algo\nsem algum sacrificio. Mas quando essa dor é\nsuperada e a lição incorporada, o resultado é\num coração infalivel, de aço.",
-      "autoria": "Edward Elric"
+      "id": "1504",
+      "pensamento": "Sou um Dev Gamer",
+      "autor": "João Praia"
     }
   ]
 }

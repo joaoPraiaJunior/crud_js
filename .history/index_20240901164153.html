@@ -27,18 +27,18 @@
     <h2>Adicione um pensamento novo:</h2>
     <section id="form-container">
       <form id="pensamento-form" data-js="formulario">
-        <input type="hidden" id="pensamento-id" name="id">
+        <input type="hidden" id="pensamento-id" >
         <label for="pensamento-conteudo">Pensamento</label>
-        <textarea id="pensamento-conteudo" name="conteudo" placeholder="Digite seu pensamento" maxlength="200" required></textarea>
+        <textarea id="pensamento-conteudo" placeholder="Digite seu pensamento" required></textarea>
         <label for="pensamento-autoria">
           Autoria ou Fonte
         </label>
-        <input type="text" id="pensamento-autoria" name="autoria" placeholder="Insira a autoria ou fonte" required>
+        <input type="text" id="pensamento-autoria" placeholder="Insira a autoria ou fonte" required>
         <div class="form-botoes">
           <button type="submit" id="botao-salvar">
             Adicionar
           </button>
-          <button type="reset" id="botao-cancelar" data-js="botao-resetar-formulario">
+          <button type="button" id="botao-cancelar">
             Cancelar
           </button>
         </div>

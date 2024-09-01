@@ -14,7 +14,7 @@ const api = {
     },
 
     async salvarPensamentos(pensamento) {
-
+        
         try {
             const response = await fetch('http://localhost:3000/pensamentos', {
                 method: 'POST',
@@ -23,6 +23,10 @@ const api = {
                 },
                 body: JSON.stringify(pensamento)
             });
+
+            const data = await response.json();
+
+            return data;
             
         } catch (error) {
             console.error('Erro em buscar pensamentos', error);
