@@ -15,6 +15,8 @@ const api = {
 
     async salvarPensamentos(pensamento) {
 
+        console.log(pensamento);
+
         try {
             const response = await fetch('http://localhost:3000/pensamentos', {
                 method: 'POST',

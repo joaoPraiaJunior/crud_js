@@ -1,4 +1,6 @@
 function constroiPensamento(pensamento) {
+
+    const listaPensamentos = document.querySelector('[data-js="lista-de-pensamentos"]');
     
     const li = document.createElement('li');
     const imagem = document.createElement('img');
@@ -20,7 +22,7 @@ function constroiPensamento(pensamento) {
     li.appendChild(divConteudo);
     li.appendChild(divAutoria);
 
-    return li;
+    listaPensamentos.appendChild(li);
 }
 
 export default constroiPensamento;

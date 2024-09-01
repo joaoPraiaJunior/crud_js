@@ -17,7 +17,6 @@ const ui = {
     },
 
     adicionarPensamentoNaLista(pensamento) {
-        
         const listaPensamentos = document.querySelector('[data-js="lista-de-pensamentos"]');
         listaPensamentos.appendChild(constroiPensamento(pensamento));
     }
