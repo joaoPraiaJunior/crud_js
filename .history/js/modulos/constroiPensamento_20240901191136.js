@@ -33,7 +33,7 @@ function constroiPensamento(pensamento) {
     li.dataset.id = pensamento.id;
     divConteudo.textContent = pensamento.conteudo;
     divAutoria.textContent = pensamento.autoria;
-    botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
+    botaoEditar.onclick = () => ui.preencherFormularioComDadosDoPensamento(pensamento.id);
     botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
 
     
