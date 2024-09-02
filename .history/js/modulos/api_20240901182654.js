@@ -1,10 +1,8 @@
-const URL_BASE = 'http://localhost:3000';
-
 const api = {
     async buscarPensamentos() {
 
         try {
-            const response = await fetch(`${URL_BASE}/pensamentos`);
+            const response = await fetch('http://localhost:3000/pensamentos');
             const data = await response.json();
             return data;
             
@@ -17,7 +15,7 @@ const api = {
     async salvarPensamentos(pensamento) {
 
         try {
-            const response = await fetch(`${URL_BASE}/pensamentos`, {
+            const response = await fetch('http://localhost:3000/pensamentos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -37,46 +35,30 @@ const api = {
     async buscarPensamentosPorId(id) {
 
         try {
-            const response = await fetch(`${URL_BASE}/pensamentos/${id}`);
+            const response = await fetch(`http://localhost:3000/pensamentos/${id}`);
             const data = await response.json();
             return data;
             
         } catch (error) {
             console.error('Erro ao buscar pensamento', error);
             throw error;
+            
         }
     },
 
     async editarPensamentos(pensamento) {
 
         try {
-            const response = await fetch(`${URL_BASE}/pensamentos/${pensamento.id}`, {
+            const response = await fetch('http://localhost:3000/pensamentos', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(pensamento)
             });
-
-            const data = await response.json();
-            return data;
             
         } catch (error) {
-            console.error('Erro ao Editar pensamento', error);
-            throw error;
-            
-        }
-    },
-
-    async excluirPensamento(id) {
-
-        try {
-            await fetch(`${URL_BASE}/pensamentos/${id}`, {
-                method: 'DELETE',
-            });
-            
-        } catch (error) {
-            console.error('Erro ao deletar pensamento', error);
+            console.error('Erro ao salvar pensamento', error);
             throw error;
             
         }

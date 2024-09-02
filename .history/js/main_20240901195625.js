@@ -1,5 +1,4 @@
 import resetarFormulario from './modulos/resetarFormulario.js';
-import salvarDadosDoFormulario from './modulos/salvarDadosDoFormulario.js';
 import ui from './modulos/ui.js';
 
 

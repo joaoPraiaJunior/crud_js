@@ -1,6 +1,5 @@
 import api from './api.js';
 import constroiPensamento from './constroiPensamento.js';
-import formularioPreenchidoComPensamento from './formularioPreenchidoComPensamento.js';
 import mensagemDeMuralVazio from './mensagemDeMuralVazio.js';
 
 
@@ -34,7 +33,6 @@ const ui = {
     async editarPensamentoDaLista(pensamentoId) {
 
         const pensamento = await api.buscarPensamentosPorId(pensamentoId);
-        formularioPreenchidoComPensamento(pensamento);
 
     },
 

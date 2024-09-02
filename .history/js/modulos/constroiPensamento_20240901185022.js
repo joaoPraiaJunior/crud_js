@@ -8,9 +8,7 @@ function constroiPensamento(pensamento) {
     const divAutoria = document.createElement('div');
     const divIcones = document.createElement('div');
     const botaoEditar = document.createElement('button');
-    const botaoExcluir = document.createElement('button');
-    const iconeEditar = document.createElement('img');
-    const iconeExcluir = document.createElement('img');
+    const iconeEditar = document.createElement('image');
 
 
     li.classList.add('li-pensamento');
@@ -21,26 +19,19 @@ function constroiPensamento(pensamento) {
     divAutoria.classList.add('pensamento-autoria');
     divIcones.classList.add('icones');
     botaoEditar.classList.add('botao-editar');
-    botaoExcluir.classList.add('botao-excluir');
     iconeEditar.src = 'assets/imagens/icone-editar.png';
     iconeEditar.alt = 'Editar pensamento';
     iconeEditar.ariaLabel = 'Editar pensamento';
-    iconeExcluir.src = 'assets/imagens/icone-excluir.png';
-    iconeExcluir.alt = 'Excluir pensamento';
-    iconeExcluir.ariaLabel = 'Excluir pensamento';
 
 
     li.dataset.id = pensamento.id;
     divConteudo.textContent = pensamento.conteudo;
     divAutoria.textContent = pensamento.autoria;
-    botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
-    botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
+    botaoEditar.onclick = () => ui.preencherFormularioComDadosDoPensamento(pensamento.id);
 
     
-    botaoExcluir.appendChild(iconeExcluir);
     botaoEditar.appendChild(iconeEditar);
     divIcones.appendChild(botaoEditar);
-    divIcones.appendChild(botaoExcluir);
     li.appendChild(imagem);
     li.appendChild(divConteudo);
     li.appendChild(divAutoria);
