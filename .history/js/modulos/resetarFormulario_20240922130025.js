@@ -6,7 +6,7 @@ function resetarFormulario() {
 	const formulario = document.querySelector(elementos.formulario);
 
 	formulario.reset();
-	formulario.id.value = '';
+	formulario.id.reset();
 }
 
 export default resetarFormulario;

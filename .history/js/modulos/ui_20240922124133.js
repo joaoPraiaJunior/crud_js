@@ -2,6 +2,7 @@ import api from './api.js';
 import constroiPensamento from './constroiPensamento.js';
 import formularioPreenchidoComPensamento from './formularioPreenchidoComPensamento.js';
 import mensagemDeMuralVazio from './mensagemDeMuralVazio.js';
+import resetarFormulario from './resetarFormulario.js';
 
 const ui = {
 	async renderizarPensamentos() {
@@ -25,11 +26,13 @@ const ui = {
 	adicionarPensamentoNaLista(pensamento) {
 		const listaPensamentos = document.querySelector('[data-js="lista-de-pensamentos"]');
 		listaPensamentos.appendChild(constroiPensamento(pensamento));
+		resetarFormulario();
 	},
 
 	async editarPensamentoDaLista(pensamentoId) {
 		const pensamento = await api.buscarPensamentosPorId(pensamentoId);
 		formularioPreenchidoComPensamento(pensamento);
+		resetarFormulario();
 	},
 
 	async excluirPensamentoDaLista(pensamentoId) {
