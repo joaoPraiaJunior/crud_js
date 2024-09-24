@@ -1,4 +1,3 @@
-import favoritarPensamento from './favoritarPensamento.js';
 import ui from './ui.js';
 
 function constroiPensamento(pensamento) {
@@ -22,29 +21,22 @@ function constroiPensamento(pensamento) {
 	divAutoria.classList.add('pensamento-autoria');
 	divIcones.classList.add('icones');
 	botaoEditar.classList.add('botao-editar');
-	botaoEditar.ariaLabel = 'Editar pensamento';
 	botaoExcluir.classList.add('botao-excluir');
-	botaoExcluir.ariaLabel = 'Excluir pensamento';
-	botaoFavoritar.classList.add('botao-favoritar');
-	botaoFavoritar.ariaLabel = 'Favoritar pensamento';
 	iconeEditar.src = 'assets/imagens/icone-editar.png';
 	iconeEditar.alt = 'Editar pensamento';
+	iconeEditar.ariaLabel = 'Editar pensamento';
 	iconeExcluir.src = 'assets/imagens/icone-excluir.png';
 	iconeExcluir.alt = 'Excluir pensamento';
-	iconeFavoritar.src = pensamento.favorito ? 'assets/imagens/icone-favorito.png' : 'assets/imagens/icone-favorito_outline.png';
-	iconeFavoritar.alt = 'Favoritar pensamento';
+	iconeExcluir.ariaLabel = 'Excluir pensamento';
 
 	li.dataset.id = pensamento.id;
 	divConteudo.textContent = pensamento.conteudo;
 	divAutoria.textContent = pensamento.autoria;
 	botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
 	botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
-	botaoFavoritar.onclick = () => favoritarPensamento(pensamento.id, !pensamento.favorito);
 
 	botaoExcluir.appendChild(iconeExcluir);
 	botaoEditar.appendChild(iconeEditar);
-	botaoFavoritar.appendChild(iconeFavoritar);
-	divIcones.appendChild(botaoFavoritar);
 	divIcones.appendChild(botaoEditar);
 	divIcones.appendChild(botaoExcluir);
 	li.appendChild(imagem);

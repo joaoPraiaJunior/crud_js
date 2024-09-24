@@ -1,4 +1,3 @@
-import favoritarPensamento from './favoritarPensamento.js';
 import ui from './ui.js';
 
 function constroiPensamento(pensamento) {
@@ -31,7 +30,7 @@ function constroiPensamento(pensamento) {
 	iconeEditar.alt = 'Editar pensamento';
 	iconeExcluir.src = 'assets/imagens/icone-excluir.png';
 	iconeExcluir.alt = 'Excluir pensamento';
-	iconeFavoritar.src = pensamento.favorito ? 'assets/imagens/icone-favorito.png' : 'assets/imagens/icone-favorito_outline.png';
+	iconeFavoritar.src = 'assets/imagens/icone-favorito_outline.png';
 	iconeFavoritar.alt = 'Favoritar pensamento';
 
 	li.dataset.id = pensamento.id;
@@ -39,7 +38,6 @@ function constroiPensamento(pensamento) {
 	divAutoria.textContent = pensamento.autoria;
 	botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
 	botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
-	botaoFavoritar.onclick = () => favoritarPensamento(pensamento.id, !pensamento.favorito);
 
 	botaoExcluir.appendChild(iconeExcluir);
 	botaoEditar.appendChild(iconeEditar);

@@ -298,13 +298,10 @@ h3 {
 }
 
 .botao-editar img,
-.botao-excluir img {
-	width: 2rem;
-	height: 2rem;
-}
-
+.botao-excluir img,
 .botao-favoritar img {
-	width: 2.3rem;
+	width: 2.1rem;
+	height: 2rem;
 }
 
 .mensagem-vazia {
