@@ -39,7 +39,7 @@ function constroiPensamento(pensamento) {
 	divAutoria.textContent = pensamento.autoria;
 	botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
 	botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
-	botaoFavoritar.onclick = () => favoritarPensamento(pensamento.id, !pensamento.favorito);
+	botaoFavoritar.onclick = () => favoritarPensamento(pensamento.id, pensamento.favorito);
 
 	botaoExcluir.appendChild(iconeExcluir);
 	botaoEditar.appendChild(iconeEditar);

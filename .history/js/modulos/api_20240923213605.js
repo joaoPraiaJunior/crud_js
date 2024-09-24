@@ -75,11 +75,9 @@ const api = {
 
 	async excluirPensamento(id) {
 		try {
-			// await fetch(`${URL_BASE}/pensamentos/${id}`, {
-			// 	method: 'DELETE',
-			// });
-
-			await axios.delete(`${URL_BASE}/pensamentos/${id}`);
+			await fetch(`${URL_BASE}/pensamentos/${id}`, {
+				method: 'DELETE',
+			});
 		} catch (error) {
 			console.error('Erro ao deletar pensamento', error);
 			throw error;
