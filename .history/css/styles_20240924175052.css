@@ -15,12 +15,11 @@ html {
 	--Cinza-claro: #edf0f4;
 	--Cinza-medio: #8f8f8f;
 	--Cinza: #444;
-	--font-primaria: 'Poppins', sans-serif;
-	--font-secundaria: 'Roboto Mono', sans-serif;
+	--font-secundaria: 'Roboto Mono, sans-serif';
 }
 
 body {
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
@@ -77,7 +76,7 @@ header .logo img {
 
 header .logo h1 {
 	color: var(--Baby-blue, #dbe4ef);
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	align-self: center;
 	font-size: 5.2rem;
 	font-weight: 300;
@@ -102,7 +101,7 @@ h2,
 h3 {
 	color: var(--Azul-Dark, #041832);
 	text-align: center;
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	font-size: 4.4rem;
 	font-style: normal;
 	font-weight: 600;
@@ -153,7 +152,7 @@ h3 {
 #pensamento-form label {
 	margin-bottom: 1.6rem;
 	color: var(--Azul-Dark, #041832);
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	font-size: 2.2rem;
 	font-style: normal;
 	font-weight: 600;
@@ -163,7 +162,7 @@ h3 {
 #pensamento-conteudo::placeholder,
 #pensamento-autoria::placeholder {
 	color: var(--Cinza-medio, #8f8f8f);
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 400;
@@ -176,7 +175,7 @@ h3 {
 	outline: none;
 	border-style: none;
 	font-size: 2rem;
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 }
 
 .form-botoes {
@@ -191,7 +190,7 @@ h3 {
 	padding: 0.8rem 3.2rem;
 	border-radius: 3.2rem;
 	color: var(--Baby-blue, #dbe4ef);
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	font-size: 22px;
 	font-style: normal;
 	font-weight: 600;
@@ -265,8 +264,7 @@ h3 {
 }
 
 .pensamento-conteudo,
-.pensamento-autoria,
-.pensamento-data {
+.pensamento-autoria {
 	margin-left: 2rem;
 	color: var(--Cinza, #444);
 	font-family: var(--font-secundaria);
@@ -328,10 +326,10 @@ h3 {
 }
 
 .mensagem-vazia p {
-	font-family: var(--font-primaria);
-	font-size: 2.2rem;
+	font-family: 'Poppins', sans-serif;
+	font-size: 22px;
 	font-weight: 400;
-	line-height: 3.3rem;
+	line-height: 33px;
 	text-align: center;
 }
 
@@ -356,7 +354,7 @@ h3 {
 	padding: 0.8rem 4.5rem;
 	border-radius: 3.2rem;
 	border: 0.1rem solid #144480;
-	font-family: var(--font-primaria);
+	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 400;
 	outline: none;
@@ -369,6 +367,20 @@ h3 {
 	left: 3.5rem;
 	width: 2.4rem;
 	height: 2.4rem;
+}
+
+.pensamento-conteudo,
+.pensamento-autoria,
+.pensamento-data {
+	margin-left: 2rem;
+	color: var(--Cinza, #444);
+	font-family: var(--font-secundaria);
+	font-style: normal;
+	line-height: normal;
+	margin-bottom: 1.6rem;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 }
 
 .pensamento-data::first-letter {

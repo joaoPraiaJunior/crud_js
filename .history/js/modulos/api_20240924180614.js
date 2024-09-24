@@ -4,7 +4,7 @@ import converterDataParaUTC from './converterDataParaUTC';
 const URL_BASE = 'http://localhost:3000';
 
 const api = {
-	async pegarPensamentos() {
+	async buscarPensamentos() {
 		try {
 			// const response = await fetch(`${URL_BASE}/pensamentos`);
 			// const data = await response.json();
@@ -104,7 +104,7 @@ const api = {
 
 	async buscarPensamentosPorTermo(termo) {
 		try {
-			const pensamentos = await this.pegarPensamentos();
+			const pensamentos = await this.buscarPensamentos();
 			const termoEmMinusculas = termo.toLowerCase();
 			const pensamentosFiltrados = pensamentos.filter((pensamento) => {
 				return pensamento.conteudo.toLowerCase().includes(termoEmMinusculas) || pensamento.autoria.toLowerCase().includes(termoEmMinusculas);

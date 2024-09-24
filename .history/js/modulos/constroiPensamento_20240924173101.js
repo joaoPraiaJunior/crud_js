@@ -22,7 +22,6 @@ function constroiPensamento(pensamento) {
 		timeZone: 'UTC',
 	};
 	const dataFormatada = pensamento.data.toLocaleDateString('pt-BR', options);
-	const dataParaDateTime = pensamento.data.toISOString().split('T')[0];
 
 	li.classList.add('li-pensamento');
 	imagem.src = 'assets/imagens/aspas-azuis.png';
@@ -32,7 +31,6 @@ function constroiPensamento(pensamento) {
 	divAutoria.classList.add('pensamento-autoria');
 	divIcones.classList.add('icones');
 	tagTime.classList.add('pensamento-data');
-	tagTime.setAttribute('datetime', dataParaDateTime);
 	botaoEditar.classList.add('botao-editar');
 	botaoEditar.ariaLabel = 'Editar pensamento';
 	botaoExcluir.classList.add('botao-excluir');

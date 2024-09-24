@@ -16,7 +16,7 @@ html {
 	--Cinza-medio: #8f8f8f;
 	--Cinza: #444;
 	--font-primaria: 'Poppins', sans-serif;
-	--font-secundaria: 'Roboto Mono', sans-serif;
+	--font-secundaria: 'Roboto Mono, sans-serif';
 }
 
 body {
@@ -241,6 +241,7 @@ h3 {
 }
 
 .li-pensamento {
+	font-family: var(--font-secundaria) !important;
 	position: relative;
 	padding: 1.6rem;
 	background: var(--Branco, #fff);
@@ -265,8 +266,7 @@ h3 {
 }
 
 .pensamento-conteudo,
-.pensamento-autoria,
-.pensamento-data {
+.pensamento-autoria {
 	margin-left: 2rem;
 	color: var(--Cinza, #444);
 	font-family: var(--font-secundaria);
@@ -369,6 +369,19 @@ h3 {
 	left: 3.5rem;
 	width: 2.4rem;
 	height: 2.4rem;
+}
+
+.pensamento-conteudo,
+.pensamento-autoria,
+.pensamento-data {
+	margin-left: 2rem;
+	color: var(--Cinza, #444);
+	font-style: normal;
+	line-height: normal;
+	margin-bottom: 1.6rem;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
 }
 
 .pensamento-data::first-letter {
