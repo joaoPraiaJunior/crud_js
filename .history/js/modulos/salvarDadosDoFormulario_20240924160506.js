@@ -1,7 +1,6 @@
 import api from './api.js';
 import resetarFormiulario from './resetarFormulario.js';
 import ui from './ui.js';
-import validarData from './validarData.js';
 
 async function salvarDadosDoFormulario(evento) {
 	evento.preventDefault();
@@ -15,11 +14,6 @@ async function salvarDadosDoFormulario(evento) {
 	const conteudo = formulario.conteudo.value.trim();
 	const autoria = formulario.autoria.value.trim();
 	const data = formulario.data.value;
-
-	if (!validarData(data)) {
-		alert('Não é permitido o cadastro de datas futuras. Selecione outra data');
-		return;
-	}
 
 	try {
 		if (id) {

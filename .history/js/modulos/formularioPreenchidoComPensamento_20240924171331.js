@@ -4,13 +4,12 @@ function formularioPreenchidoComPensamento(pensamento) {
 	};
 
 	const formulario = document.querySelector(elmentos.formulario);
-	const dataFormatada = pensamento.data.toISOString().split('T')[0];
 
 	formulario.id.value = pensamento.id;
 	formulario.conteudo.value = pensamento.conteudo;
 	formulario.autoria.value = pensamento.autoria;
-	formulario.data.value = dataFormatada;
-	formulario.scrollIntoView();
+	formulario.data.value = pensamento.data;
+	formulario.conteudo.focus();
 }
 
 export default formularioPreenchidoComPensamento;

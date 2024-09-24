@@ -16,7 +16,7 @@ html {
 	--Cinza-medio: #8f8f8f;
 	--Cinza: #444;
 	--font-primaria: 'Poppins', sans-serif;
-	--font-secundaria: 'Roboto Mono', sans-serif;
+	--font-secundaria: 'Roboto Mono, sans-serif';
 }
 
 body {

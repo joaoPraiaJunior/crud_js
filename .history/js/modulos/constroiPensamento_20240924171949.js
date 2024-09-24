@@ -14,15 +14,7 @@ function constroiPensamento(pensamento) {
 	const iconeEditar = document.createElement('img');
 	const iconeExcluir = document.createElement('img');
 	const iconeFavoritar = document.createElement('img');
-	const options = {
-		weekday: 'long',
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric',
-		timeZone: 'UTC',
-	};
-	const dataFormatada = pensamento.data.toLocaleDateString('pt-BR', options);
-	const dataParaDateTime = pensamento.data.toISOString().split('T')[0];
+	const dataFormatada = pensamento.data.toLocaleDateString('pt-BR');
 
 	li.classList.add('li-pensamento');
 	imagem.src = 'assets/imagens/aspas-azuis.png';
@@ -32,7 +24,6 @@ function constroiPensamento(pensamento) {
 	divAutoria.classList.add('pensamento-autoria');
 	divIcones.classList.add('icones');
 	tagTime.classList.add('pensamento-data');
-	tagTime.setAttribute('datetime', dataParaDateTime);
 	botaoEditar.classList.add('botao-editar');
 	botaoEditar.ariaLabel = 'Editar pensamento';
 	botaoExcluir.classList.add('botao-excluir');
