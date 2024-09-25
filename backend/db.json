@@ -65,10 +65,9 @@
     },
     {
       "id": "2d6e",
-      "favorito": false,
       "conteudo": "Não faça drama, faça café! :)",
       "autoria": "Dev",
-      "data": "2024-09-24T19:32:39.000Z"
+      "data": "2024-09-24"
     },
     {
       "id": "3f1a",
@@ -94,7 +93,7 @@
     {
       "id": "91ae",
       "favorito": true,
-      "conteudo": "Não se pode aprender algo de uma lição\nsem dor, já que não se pode ganhar algo\nsem algum sacrifício. Mas quando essa dor é\nsuperada e a lição incorporada, o resultado é\num coração infalível, de aço.",
+      "conteudo": "Não se pode aprender algo de uma lição sem dor, já que não se pode ganhar algo sem algum sacrifício. Mas quando essa dor é superada e a lição incorporada, o resultado é um coração infalível, de aço.",
       "autoria": "Edward Elric",
       "data": "2024-09-24T19:32:39.000Z"
     },

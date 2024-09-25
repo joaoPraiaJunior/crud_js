@@ -24,9 +24,9 @@ async function salvarDadosDoFormulario(evento) {
 		return;
 	}
 
-	const verificacaoDePensamentoDuplicado = await verificaPensamentoDuplicado(conteudo, autoria);
+	const verificacaoDePensamentoDuplicado = verificaPensamentoDuplicado(conteudo, autoria);
 
-	if (verificacaoDePensamentoDuplicado) {
+	if (!verificacaoDePensamentoDuplicado) {
 		alert(verificacaoDePensamentoDuplicado);
 		return;
 	}

@@ -1,5 +1,4 @@
 import favoritarPensamento from './favoritarPensamento.js';
-import primeiraLetraMaiusculaRegex from './primeiraLetraMaiusculaRegex.js';
 import ui from './ui.js';
 
 function constroiPensamento(pensamento) {
@@ -23,7 +22,7 @@ function constroiPensamento(pensamento) {
 		timeZone: 'UTC',
 	};
 	const dataFormatada = pensamento.data.toLocaleDateString('pt-BR', options);
-	const dataComPrimeiraLetraMaiuscula = primeiraLetraMaiusculaRegex(dataFormatada);
+	const primeiraLetraMaiusculaRegex = primeiraLetraMaiusculaRegex(dataFormatada);
 	const dataParaDateTime = pensamento.data.toISOString().split('T')[0];
 
 	li.classList.add('li-pensamento');
@@ -51,7 +50,7 @@ function constroiPensamento(pensamento) {
 	li.dataset.id = pensamento.id;
 	divConteudo.textContent = pensamento.conteudo;
 	divAutoria.textContent = pensamento.autoria;
-	tagTime.textContent = dataComPrimeiraLetraMaiuscula;
+	tagTime.textContent = dataFormatada;
 	botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
 	botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
 	botaoFavoritar.onclick = () => favoritarPensamento(pensamento.id, !pensamento.favorito);
