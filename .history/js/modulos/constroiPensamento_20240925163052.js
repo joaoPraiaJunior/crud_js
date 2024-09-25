@@ -23,7 +23,7 @@ function constroiPensamento(pensamento) {
 		timeZone: 'UTC',
 	};
 	const dataFormatada = pensamento.data.toLocaleDateString('pt-BR', options);
-	const dataComPrimeiraLetraMaiuscula = primeiraLetraMaiusculaRegex(dataFormatada);
+	const primeiraLetraMaiuscula = primeiraLetraMaiusculaRegex(dataFormatada);
 	const dataParaDateTime = pensamento.data.toISOString().split('T')[0];
 
 	li.classList.add('li-pensamento');
@@ -51,7 +51,7 @@ function constroiPensamento(pensamento) {
 	li.dataset.id = pensamento.id;
 	divConteudo.textContent = pensamento.conteudo;
 	divAutoria.textContent = pensamento.autoria;
-	tagTime.textContent = dataComPrimeiraLetraMaiuscula;
+	tagTime.textContent = primeiraLetraMaiuscula;
 	botaoEditar.onclick = () => ui.editarPensamentoDaLista(pensamento.id);
 	botaoExcluir.onclick = () => ui.excluirPensamentoDaLista(pensamento.id);
 	botaoFavoritar.onclick = () => favoritarPensamento(pensamento.id, !pensamento.favorito);

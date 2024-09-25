@@ -2,7 +2,6 @@ import api from './api.js';
 import resetarFormiulario from './resetarFormulario.js';
 import ui from './ui.js';
 import validacaoFormulario from './validacaoFormulario.js';
-import verificaPensamentoDuplicado from './verificaPensamentoDuplicado.js';
 
 async function salvarDadosDoFormulario(evento) {
 	evento.preventDefault();
@@ -21,13 +20,6 @@ async function salvarDadosDoFormulario(evento) {
 
 	if (erro) {
 		alert(erro);
-		return;
-	}
-
-	const verificacaoDePensamentoDuplicado = await verificaPensamentoDuplicado(conteudo, autoria);
-
-	if (verificacaoDePensamentoDuplicado) {
-		alert(verificacaoDePensamentoDuplicado);
 		return;
 	}
 

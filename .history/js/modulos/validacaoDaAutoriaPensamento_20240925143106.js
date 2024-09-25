@@ -1,0 +1,3 @@
+const validacaoDaAutoriaPensamento = () => {};
+
+export { validacaoDaAutoriaPensamento };

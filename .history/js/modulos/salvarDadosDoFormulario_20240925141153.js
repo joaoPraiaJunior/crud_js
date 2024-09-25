@@ -1,8 +1,8 @@
 import api from './api.js';
 import resetarFormiulario from './resetarFormulario.js';
 import ui from './ui.js';
-import validacaoFormulario from './validacaoFormulario.js';
-import verificaPensamentoDuplicado from './verificaPensamentoDuplicado.js';
+import validacaoDoConteudoPensamento from './validacaoDoConteudoPensamento.js';
+import validarData from './validarData.js';
 
 async function salvarDadosDoFormulario(evento) {
 	evento.preventDefault();
@@ -17,17 +17,13 @@ async function salvarDadosDoFormulario(evento) {
 	const autoria = formulario.autoria.value.trim();
 	const data = formulario.data.value;
 
-	const erro = validacaoFormulario(conteudo, autoria, data);
-
-	if (erro) {
-		alert(erro);
+	if (!validacaoDoConteudoPensamento(conteudo)) {
+		alert('É permitida a inclusão apenas de letras e espaços com no mínimo 200 caracteres');
 		return;
 	}
 
-	const verificacaoDePensamentoDuplicado = await verificaPensamentoDuplicado(conteudo, autoria);
-
-	if (verificacaoDePensamentoDuplicado) {
-		alert(verificacaoDePensamentoDuplicado);
+	if (!validarData(data)) {
+		alert('Não é permitido o cadastro de datas futuras. Selecione outra data');
 		return;
 	}
 
