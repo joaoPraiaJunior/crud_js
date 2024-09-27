@@ -31,7 +31,7 @@ h3 {
 	font-size: 2.2rem;
 	font-style: normal;
 	font-weight: 600;
-	hyphens: auto;
+	line-height: normal;
 }
 
 header {
@@ -127,6 +127,7 @@ main {
 
 #pensamento-form textarea,
 #pensamento-form input {
+	font-size: 1.6rem;
 	font-family: var(--font-primaria);
 	margin-bottom: 1.6rem;
 	border-style: none;
@@ -143,6 +144,7 @@ main {
 #botao-cancelar {
 	color: var(--Baby-blue, #dbe4ef);
 	font-family: var(--font-primaria);
+	font-size: 1.6rem;
 	font-weight: 600;
 	padding: 0.8rem 0;
 	border-radius: 3.2rem;

@@ -21,7 +21,6 @@ html {
 
 body {
 	font-family: var(--font-primaria);
-	font-size: 1.6rem;
 }
 
 h2,
@@ -31,7 +30,8 @@ h3 {
 	font-size: 2.2rem;
 	font-style: normal;
 	font-weight: 600;
-	hyphens: auto;
+	line-height: normal;
+	text-align: center;
 }
 
 header {
@@ -70,112 +70,6 @@ header {
 
 main {
 	padding: 4rem;
-}
-
-#form-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 4rem;
-	background: #fff;
-	margin-top: 4rem;
-	border-radius: 1.6rem;
-	padding: 2.8rem 2rem;
-	box-shadow: 8px 8px 20px 0px rgba(4, 24, 50, 0.08);
-	width: 100%;
-	max-width: 71.2rem;
-}
-
-#pensamento-form {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-}
-
-#pensamento-conteudo,
-#pensamento-autoria,
-#pensamento-data {
-	padding: 1.6rem;
-	border-radius: 8px;
-	background: var(--Cinza-claro, #edf0f4);
-}
-
-#pensamento-conteudo {
-	min-height: 8rem;
-}
-
-#pensamento-data {
-	cursor: pointer;
-}
-
-#pensamento-form label {
-	color: var(--Azul-Dark, #041832);
-	font-family: var(--font-primaria);
-	font-weight: 600;
-	margin: 1rem 0;
-}
-
-#pensamento-conteudo::placeholder,
-#pensamento-autoria::placeholder {
-	color: var(--Cinza-medio, #8f8f8f);
-	font-family: var(--font-primaria);
-	font-size: 1.4rem;
-	font-style: normal;
-	font-weight: 400;
-}
-
-#pensamento-form textarea,
-#pensamento-form input {
-	font-family: var(--font-primaria);
-	margin-bottom: 1.6rem;
-	border-style: none;
-	outline: none;
-}
-
-.form-botoes {
-	display: flex;
-	justify-content: space-between;
-	gap: 1.6rem;
-}
-
-#botao-salvar,
-#botao-cancelar {
-	color: var(--Baby-blue, #dbe4ef);
-	font-family: var(--font-primaria);
-	font-weight: 600;
-	padding: 0.8rem 0;
-	border-radius: 3.2rem;
-	width: 100%;
-	cursor: pointer;
-}
-
-#botao-salvar {
-	background: var(--Azul-Dark, #041832);
-}
-
-#botao-cancelar {
-	color: var(--Azul-Dark, #041832);
-}
-
-.mensagem-vazia {
-	display: none;
-	text-align: center;
-	color: var(--Azul-Dark, #041832);
-	margin-top: 40px;
-}
-
-.mensagem-vazia img {
-	max-width: 200px;
-	margin-bottom: 20px;
-}
-
-.mensagem-vazia p {
-	font-family: var(--font-primaria);
-	font-size: 2.2rem;
-	font-weight: 400;
-	line-height: 3.3rem;
-	text-align: center;
 }
 
 /* main {
@@ -271,6 +165,39 @@ h3 {
 	margin-top: 4rem;
 }
 
+#pensamento-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#pensamento-conteudo,
+#pensamento-autoria,
+#pensamento-data {
+	padding: 1.6rem;
+	border-radius: 8px;
+	background: var(--Cinza-claro, #edf0f4);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+#pensamento-conteudo {
+	min-height: 8rem;
+}
+
+#pensamento-data {
+	cursor: pointer;
+}
+
+#pensamento-form label {
+	margin-bottom: 1.6rem;
+	color: var(--Azul-Dark, #041832);
+	font-family: var(--font-primaria);
+	font-size: 2.2rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
 
 #pensamento-conteudo::placeholder,
 #pensamento-autoria::placeholder {
