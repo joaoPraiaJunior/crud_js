@@ -393,8 +393,8 @@ footer {
 
 	.background-overlay {
 		background-image: url('../assets/imagens/background.png');
-		background-size: cover;
-		background-position: top center;
+		background-size: contain;
+		background-position: top;
 		background-repeat: no-repeat;
 	}
 
