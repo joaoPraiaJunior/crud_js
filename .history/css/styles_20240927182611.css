@@ -319,7 +319,6 @@ footer {
 .mensagem {
 	color: red;
 	font-size: 1.4rem;
-	font-weight: bold;
 }
 
 .aparecer-mensagem {
@@ -389,12 +388,6 @@ footer {
 
 	.imagem-cabecalho img {
 		max-width: 40rem;
-	}
-
-	.background-overlay {
-		background-image: url('../assets/imagens/background.png');
-		background-size: contain;
-		background-position: top;
 	}
 
 	#form-container {

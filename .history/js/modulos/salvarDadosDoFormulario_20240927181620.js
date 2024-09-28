@@ -1,5 +1,5 @@
 import api from './api.js';
-import mensagens from './mensagens.js';
+import mensagem from './mensagens.js';
 import resetarFormiulario from './resetarFormulario.js';
 import ui from './ui.js';
 import validacaoFormulario from './validacaoFormulario.js';
@@ -21,14 +21,14 @@ async function salvarDadosDoFormulario(evento) {
 	const erro = validacaoFormulario(conteudo, autoria, data);
 
 	if (erro) {
-		mensagens(erro);
+		mensagem(erro);
 		return;
 	}
 
 	const verificacaoDePensamentoDuplicado = await verificaPensamentoDuplicado(conteudo, autoria);
 
 	if (verificacaoDePensamentoDuplicado) {
-		mensagens(verificacaoDePensamentoDuplicado);
+		alert(verificacaoDePensamentoDuplicado);
 		return;
 	}
 
@@ -37,7 +37,6 @@ async function salvarDadosDoFormulario(evento) {
 			await api.editarPensamentos({ id, conteudo, autoria, data });
 		} else {
 			await api.salvarPensamentos({ conteudo, autoria, data });
-			mensagens('Pensamento salvo com sucesso!', true);
 		}
 
 		ui.renderizarPensamentos();

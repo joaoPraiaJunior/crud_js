@@ -13,7 +13,6 @@ async function adicionarChaveAoPensamento() {
 		return pensamentosSet;
 	} catch (error) {
 		console.error(error);
-		throw error;
 	}
 }
 

@@ -1,4 +1,5 @@
 import api from './api.js';
+import mensagem from './mensagens.js';
 
 async function adicionarChaveAoPensamento() {
 	const pensamentosSet = new Set();
@@ -13,7 +14,7 @@ async function adicionarChaveAoPensamento() {
 		return pensamentosSet;
 	} catch (error) {
 		console.error(error);
-		throw error;
+		mensagem(error);
 	}
 }
 

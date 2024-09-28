@@ -37,7 +37,6 @@ async function salvarDadosDoFormulario(evento) {
 			await api.editarPensamentos({ id, conteudo, autoria, data });
 		} else {
 			await api.salvarPensamentos({ conteudo, autoria, data });
-			mensagens('Pensamento salvo com sucesso!', true);
 		}
 
 		ui.renderizarPensamentos();

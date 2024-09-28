@@ -6,7 +6,7 @@ async function verificaPensamentoDuplicado(conteudo, autoria) {
 	const pensamentosSet = await adicionarChaveAoPensamento();
 
 	if (pensamentosSet.has(chaveNovoPensamento)) {
-		return 'Esse pensamento já foi cadastrado!';
+		return 'Esse pensamento já existe!';
 	}
 }
 

@@ -391,10 +391,8 @@ footer {
 		max-width: 40rem;
 	}
 
-	.background-overlay {
+	main {
 		background-image: url('../assets/imagens/background.png');
-		background-size: contain;
-		background-position: top;
 	}
 
 	#form-container {

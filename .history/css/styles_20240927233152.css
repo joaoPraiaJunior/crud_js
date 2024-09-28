@@ -395,6 +395,7 @@ footer {
 		background-image: url('../assets/imagens/background.png');
 		background-size: contain;
 		background-position: top;
+		opacity: 0.5;
 	}
 
 	#form-container {
