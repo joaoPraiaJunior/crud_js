@@ -1,0 +1,378 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+:root {
+	--Baby-blue: #dbe4ef;
+	--Azul-Dark: #041832;
+	--Cinza-claro: #edf0f4;
+	--Cinza-medio: #8f8f8f;
+	--Cinza: #444;
+	--font-primaria: 'Poppins', sans-serif;
+	--font-secundaria: 'Roboto Mono', sans-serif;
+}
+
+body {
+	font-family: var(--font-primaria);
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	padding-top: 12rem;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	min-height: 280vh;
+	box-sizing: border-box;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/assets/imagens/background.png');
+	background-size: cover;
+	opacity: 0.5;
+	z-index: -1;
+}
+
+.overlay-color {
+	background-color: #f4f4f4;
+}
+
+header {
+	padding: 11.2rem 24rem 11.2rem 36rem;
+	background: var(--Azul-Dark, #041832);
+}
+
+.conteudo-cabecalho {
+	display: flex;
+	justify-content: center;
+	gap: 3.2rem;
+	align-items: center;
+}
+
+header .logo {
+	display: flex;
+	flex-direction: column;
+	gap: 4.8rem;
+}
+
+header .logo img {
+	max-width: 20rem;
+}
+
+header .logo h1 {
+	color: var(--Baby-blue, #dbe4ef);
+	font-family: var(--font-primaria);
+	align-self: center;
+	font-size: 5.2rem;
+	font-weight: 300;
+	line-height: 6.76rem;
+}
+
+.imagem-cabecalho img {
+	max-width: 50rem;
+}
+
+footer {
+	padding: 32px 360px;
+	background: #041832;
+	color: var(--Baby-blue, #dbe4ef);
+	text-align: center;
+	width: 100%;
+	position: relative;
+	left: 0;
+}
+
+h2,
+h3 {
+	color: var(--Azul-Dark, #041832);
+	text-align: center;
+	font-family: var(--font-primaria);
+	font-size: 4.4rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+#form-container {
+	display: flex;
+	padding: 4.8rem 4rem;
+	flex-direction: column;
+	align-items: center;
+	gap: 4rem;
+	align-self: center;
+	justify-content: center;
+	border-radius: 16px;
+	position: relative;
+	background: #fff;
+	box-shadow: 8px 8px 20px 0px rgba(4, 24, 50, 0.08);
+	width: 100%;
+	max-width: 71.2rem;
+	margin-top: 4rem;
+}
+
+#pensamento-form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#pensamento-conteudo,
+#pensamento-autoria,
+#pensamento-data {
+	padding: 1.6rem;
+	border-radius: 8px;
+	background: var(--Cinza-claro, #edf0f4);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+#pensamento-conteudo {
+	min-height: 8rem;
+}
+
+#pensamento-data {
+	cursor: pointer;
+}
+
+#pensamento-form label {
+	margin-bottom: 1.6rem;
+	color: var(--Azul-Dark, #041832);
+	font-family: var(--font-primaria);
+	font-size: 2.2rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+#pensamento-conteudo::placeholder,
+#pensamento-autoria::placeholder {
+	color: var(--Cinza-medio, #8f8f8f);
+	font-family: var(--font-primaria);
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+#pensamento-form textarea,
+#pensamento-form input {
+	margin-bottom: 2.4rem;
+	outline: none;
+	border-style: none;
+	font-size: 2rem;
+	font-family: var(--font-primaria);
+}
+
+.form-botoes {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	padding-top: 1.6rem;
+}
+
+#botao-salvar,
+#botao-cancelar {
+	padding: 0.8rem 3.2rem;
+	border-radius: 3.2rem;
+	color: var(--Baby-blue, #dbe4ef);
+	font-family: var(--font-primaria);
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	cursor: pointer;
+}
+
+#botao-salvar {
+	background: var(--Azul-Dark, #041832);
+	min-width: 16rem;
+}
+
+#botao-cancelar {
+	color: var(--Azul-Dark, #041832);
+}
+
+#lista-pensamentos-container {
+	width: 100%;
+	max-width: 120rem;
+	margin: 4rem 0;
+}
+
+#lista-pensamentos-container h3 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 4rem 0;
+}
+
+#lista-pensamentos-container h3::before {
+	content: '';
+	display: inline-block;
+	align-self: center;
+	width: 18rem;
+	height: 0.1rem;
+	background: #041832;
+	margin: 5.8rem 0 4rem;
+}
+
+#lista-pensamentos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 3.2rem;
+	padding: 0;
+	list-style: none;
+}
+
+/* .li-pensamento {
+	position: relative;
+	padding: 1.6rem;
+	background: var(--Branco, #fff);
+	box-shadow: 0.8rem 0.8rem 0rem 0rem #154580;
+	flex: 1 1 calc(33.333% - 24px);
+	max-width: calc(33.333% - 24px);
+	min-width: 38.4rem;
+	min-height: 31.5rem;
+	display: flex;
+	flex-direction: column;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+} */
+
+.li-pensamento {
+	display: grid;
+	background: var(--Branco, #fff);
+	box-shadow: 0.8rem 0.8rem 0rem 0rem #154580;
+	flex: 1 1 calc(33.333% - 24px);
+	max-width: calc(33.333% - 24px);
+	min-width: 38.4rem;
+	min-height: 31.5rem;
+	padding: 1.6rem;
+}
+
+.icone-aspas {
+	width: 6.4rem;
+	height: 5rem;
+}
+
+.pensamento-conteudo,
+.pensamento-autoria,
+.pensamento-data {
+	color: var(--Cinza, #444);
+	font-family: var(--font-secundaria);
+	font-style: normal;
+	line-height: normal;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+.pensamento-conteudo {
+	margin-top: 9.6rem;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.pensamento-autoria {
+	font-size: 2.2rem;
+	font-weight: 600;
+}
+
+.icones {
+	position: absolute;
+	bottom: 1.6rem;
+	right: 1.6rem;
+}
+
+.botao-editar,
+.botao-excluir,
+.botao-favoritar {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0.8rem;
+	margin-left: 0.8rem;
+}
+
+.botao-editar img,
+.botao-excluir img {
+	width: 2rem;
+	height: 2rem;
+}
+
+.botao-favoritar img {
+	width: 2.3rem;
+}
+
+.mensagem-vazia {
+	display: none;
+	text-align: center;
+	color: var(--Azul-Dark, #041832);
+	margin-top: 40px;
+}
+
+.mensagem-vazia img {
+	max-width: 200px;
+	margin-bottom: 20px;
+}
+
+.mensagem-vazia p {
+	font-family: var(--font-primaria);
+	font-size: 2.2rem;
+	font-weight: 400;
+	line-height: 3.3rem;
+	text-align: center;
+}
+
+#busca-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 60rem;
+	margin: 5.6rem auto;
+	padding: 0 1.6rem;
+}
+
+#busca-container label {
+	display: flex;
+	align-items: center;
+}
+
+#campo-busca {
+	flex: 1;
+	width: 57.2rem;
+	height: 4.8rem;
+	padding: 0.8rem 4.5rem;
+	border-radius: 3.2rem;
+	border: 0.1rem solid #144480;
+	font-family: var(--font-primaria);
+	font-size: 1.6rem;
+	font-weight: 400;
+	outline: none;
+}
+
+#busca-container label::before {
+	content: url('../assets/imagens/lupa.png');
+	display: block;
+	position: relative;
+	left: 3.5rem;
+	width: 2.4rem;
+	height: 2.4rem;
+}
